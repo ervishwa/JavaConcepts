@@ -1,0 +1,100 @@
+What is an Exception?
+
+An exception is an unwanted or unexpected event, which occurs during the execution of a program
+ i.e at run time, that disrupts the normal flow of the program’s instructions.
+
+Error vs Exception
+
+Error: An Error indicates a serious problem that a reasonable application should not try to catch.
+Exception: Exception indicates conditions that a reasonable application might try to catch.
+
+Exception Hierarchy
+
+All exception and error types are sub classes of class Throwable, which is the base class of the hierarchy.
+One branch is headed by Exception. This class is used for exceptional conditions that user programs should catch.
+NullPointerException is an example of such an exception. Another branch, Error are used by the Java run-time system(JVM)
+to indicate errors having to do with the run-time environment itself(JRE). StackOverflowError is an example of such an error.
+
+How Programmer handles an exception?
+
+Customized Exception Handling: Java exception handling is managed via five keywords: try, catch, throw, throws, and finally.
+Briefly, here is how they work. Program statements that you think can raise exceptions are contained within a try block.
+If an exception occurs within the try block, it is thrown. Your code can catch this exception (using catch block) and
+handle it in some rational manner. System-generated exceptions are automatically thrown by the Java run-time system.
+To manually throw an exception, use the keyword throw. Any exception that is thrown out of a method must be specified
+as such by a throws clause. Any code that absolutely must be executed after a try block completes is put in a finally block.
+
+Consider the following java program.
+
+ class Scaler{
+      public static void main (String[] args) {
+                    // array of size 4
+                    int[] arr = new int[4];
+
+                 // this statement causes an exception
+                  int i = arr[10];
+
+                // the following statement will never execute
+                System.out.println("Hello World");
+           }
+ }
+Output :
+
+ Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 10 at Scaler.main(Scaler.java:9)
+
+Explanation: In the above example an array is defined with size i.e. you can access elements only from index 0 to 3.
+But you trying to access the elements at index 10(by mistake) that’s why it is throwing an exception. In this case,
+JVM terminates the program abnormally. The statement System.out.println(“Hello World”); will never execute.
+To execute it, we must handle the exception using try-catch. Hence to continue the normal flow of the program,
+we need a try-catch clause.
+
+//java Try & Catch block
+
+Java try block:
+
+
+Java try block is used to enclose the code that might throw an exception. It must be used within the method.
+
+If an exception occurs at the particular statement of try block, the rest of the block code will not execute.
+So, it is recommended not to keeping the code in try block that will not throw an exception.
+
+Java try block must be followed by either catch or finally block.
+
+
+
+Java catch block:
+
+
+Java catch block is used to handle the Exception by declaring the type of exception within the parameter.
+The declared exception must be the parent class exception ( i.e., Exception) or the generated exception type.
+However, a good approach is to declare the generated type of exception.
+
+The catch block must be used after the try block only. You can use multiple catch block with a single try block.
+
+How to use a try-catch clause
+
+ try {
+ // block of code to monitor for errors
+ // the code you think can raise an exception
+ }
+ catch (ExceptionType1 exOb) {
+ // exception handler for ExceptionType1
+ }
+ catch (ExceptionType2 exOb) {
+ // exception handler for ExceptionType2
+ }
+
+
+
+Points to remember :
+
+In a method, there can be more than one statement that might throw an exception, So put all these statements
+within its own try block and provide a separate exception handler within own catch block for each of them.
+If an exception occurs within the try block, that exception is handled by the exception handler associated with it.
+To associate an exception handler, we must put catch block after it. There can be more than one exception handler.
+each catch block is an exception handler that handles the exception of the type indicated by its argument.
+The argument, ExceptionType declares the type of the exception that it can handle and must be the name of the
+class that inherits from Throwable class.
+For each try block there can be zero or more catch blocks, but only one finally block.
+
+
