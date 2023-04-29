@@ -8,6 +8,17 @@ Java Constructors :
 
 A constructor in Java is a special method that is used to initialize objects.
 The constructor is called when an object of a class is created. It can be used to set initial values for object attributes.
+----------------------
+Enums
+An enum is a special "class" that represents a group of constants (unchangeable variables, like final variables).
+Enum is short for "enumerations",
 
-java modifiers :
+An enum can, just like a class, have attributes and methods. The only difference is that enum constants are public, static and final (unchangeable - cannot be overridden).
 
+An enum cannot be used to create objects, and it cannot extend other classes (but it can implement interfaces).
+
+Why And When To Use Enums?
+
+Use enums when you have values that you know aren't going to change, like month days, days, colors, deck of cards, etc.
+
+--------------------------
