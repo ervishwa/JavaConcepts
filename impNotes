@@ -98,3 +98,152 @@ class that inherits from Throwable class.
 For each try block there can be zero or more catch blocks, but only one finally block.
 
 
+---------------------------
+Deque
+The Deque interface of the Java collections framework provides the functionality of a double-ended queue.
+It extends the Queue interface.
+
+Classes that Implement Deque:
+
+In order to use the functionalities of the Deque interface, we need to use classes that implement it:
+
+ArrayDeque
+LinkedList
+In a regular queue, elements are added from the rear and removed from the front. However, in a deque,
+we can insert and remove elements from both front and rear.
+
+In Java, we must import the java.util.Deque package to use Deque.
+
+Syntax:
+
+Deque<String> names= new ArrayDeque<>();
+
+Tha above statement creates a Deque of Strings, we can now push and remove Strings from this deque easily.
+
+Methods of Deque:
+
+addFirst() - Adds the specified element at the beginning of the deque. Throws an exception if the deque is full.
+addLast() - Adds the specified element at the end of the deque. Throws an exception if the deque is full.
+offerFirst() - Adds the specified element at the beginning of the deque. Returns false if the deque is full.
+offerLast() - Adds the specified element at the end of the deque. Returns false if the deque is full.
+getFirst() - Returns the first element of the deque. Throws an exception if the deque is empty.
+getLast() - Returns the last element of the deque. Throws an exception if the deque is empty.
+peekFirst() - Returns the first element of the deque. Returns null if the deque is empty.
+peekLast() - Returns the last element of the deque. Returns null if the deque is empty.
+removeFirst() - Returns and removes the first element of the deque. Throws an exception if the deque is empty.
+removeLast() - Returns and removes the last element of the deque. Throws an exception if the deque is empty.
+pollFirst() - Returns and removes the first element of the deque. Returns null if the deque is empty.
+pollLast() - Returns and removes the last element of the deque. Returns null if the deque is empty.
+size() - Return an integer denoting the total number of elements in the deque at present.
+
+
+-------------------------
+
+Priority Queue
+
+The PriorityQueue class provides the functionality of the heap data structure. It implements the Queue interface.
+
+Unlike normal queues, priority queue elements are retrieved in sorted order.
+
+Suppose, we want to retrieve elements in ascending order. In this case, the head of the priority queue will be the smallest element.
+ Once this element is retrieved, the next smallest element will be the head of the queue.
+
+It is important to note that the elements of a priority queue may not be sorted. However, elements are always retrieved in sorted order.
+
+
+In order to create a priority queue, we must import the java.util.PriorityQueue package. Once we import the package,
+here is how we can create a priority queue in Java.
+
+PriorityQueue<Integer> numbers = new PriorityQueue<>();
+
+Here, we have created a priority queue without any arguments. In this case, the head of the priority queue is the smallest element
+ of the queue. And elements are removed in ascending order from the queue.
+
+However, we can customize the ordering of elements with the help of the Comparator interface.
+
+
+Methods:
+
+The PriorityQueue class provides the implementation of all the methods present in the Queue interface.
+
+add() :  Inserts the specified element to the queue. If the queue is full, it throws an exception.
+Time Complexity: O(logN) where N denotes the number of elements present in the PriorityQueue.
+offer() - Inserts the specified element to the queue. If the queue is full, it returns false. Time Complexity: O(logN)
+poll() - returns and removes the head of the queue. Time Complexity: O(logN)
+peek() - return the head of the queue. Time Complexity: O(1)
+
+
+------------------------------
+
+BigInteger
+
+1) Declaration:
+
+ int a, b;
+ BigInteger A, B;
+2) Initialization:
+
+ a = 54;
+ b = 23;
+ A = BigInteger.valueOf(54);
+ B = BigInteger.valueOf(37);
+And for Integers available as string you can initialize them as:
+
+ A = new BigInteger(“54”);
+ B = new BigInteger(“123456789123456789”);
+3) Mathematical operations:
+
+ BigInteger C = A.add(B);
+Other similar function are subtract() , multiply(), divide(), remainder()
+
+
+String n = sc.next();
+BigInteger num = new BigInteger(n);
+num.isProbablePrime(1) return true , false according to number is prime or not..
+
+-------------------------------
+
+BigDecimal
+
+Syntax:
+
+Declaration
+
+double a, b;
+BigDecimal A, B;
+Initialization:
+
+a = 5.4;
+b = 2.3;
+A = BigDecimal.valueOf(5.4);
+B = BigDecimal.valueOf(2.3);
+If you are given a String representation of a double number then you can initialize in the following manner:
+
+A = new BigDecimal(“5.4”);
+B = new BigDecimal(“1238126387123.1234”);
+Extraction of value from BigDecimal:
+
+// value should be in limit of double x
+double x = A.doubleValue();
+
+// To get string representation of BigDecimal A
+String z = A.toString();
+Comparison:
+
+if (a < b) {} // For primitive double
+if (A.compareTo(B) < 0) {} // For BigDecimal
+Actually compareTo returns -1(less than), 0(Equal), 1(greater than) according to values.
+
+For equality we can also use:
+
+if (A.equals(B)) {} // A is equal to B
+
+------------------------
+
+SubString ..
+
+
+
+
+
+
