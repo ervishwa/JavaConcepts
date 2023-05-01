@@ -239,8 +239,46 @@ For equality we can also use:
 if (A.equals(B)) {} // A is equal to B
 
 ------------------------
+substring
 
-SubString ..
+str.substring(intial index , final index);
+
+------------------------
+data Types Conversion -
+
+Integer to String
+
+int n = 5;
+String num = Integer.toString(n);
+---
+String to Integer
+
+String name = 'vishnu';
+
+int n = Integer.parseInt(name);
+------
+String to long
+
+String name = "2324";
+
+long n = Long.parseLong(name);
+-----
+Integer to double
+int a = 10;
+double b = (double)a;
+
+-----
+Integer to float
+int a = 10;
+float b = (float)a;
+--------
+//directly assigning the value to array..
+
+int arr[] = {1,2,3}
+
+
+
+
 
 
 
