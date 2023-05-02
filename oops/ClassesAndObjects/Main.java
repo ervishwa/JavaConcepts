@@ -1,7 +1,7 @@
 package JavaConcepts.oops.ClassesAndObjects;
 
 public class Main {
-    int num = 5; //class attributes or class variable.(another term of class attributes is fields).
+   protected int num = 5; //class attributes or class variable.(another term of class attributes is fields).
    private int num2 = 10;
 
     //methods
